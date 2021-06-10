@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  display: block;
+  overflow-x: hidden;
+
+}
+
+.landing{
+  padding-top:50px;
+  background-image: url("assets/img/background.jpg");
+  background-repeat:no-repeat;
+  height:540px;
+}
+.card{
+  position: absolute;
+}
+.card-img-overlay{
+  text-align: center;
+
+}
+.card-title{
+  color: #faaf3e;
+  margin-bottom: 15px;
+  font-family: 'Great Vibes', cursive;
+}
+.card-text {
+  position: relative;
+  top:7%;
+  font-size: 45px;
+  color:white;
+  font-family: 'Lobster', cursive;
+}
+p{
+  position: relative;
+  top:12%;
+  font-size: 20px;
+}
+.card button{
+  background-color: #faaf3e;
+  font-size: 25px;
+   width: 23%;
+  height: 14%;
+   border-radius: 1000px;
+   position: relative;
+   top:18%;
+}
+.card button:hover{
+  color: white;
+  background-color:black;
+}
+.main-content{
+
+  width:auto;
+  height:680px;
+}
+.main-content .row{
+  height: 100px;
+  margin-top:20px;
+}
+.main-content .row .card{
+  color:white;
+}

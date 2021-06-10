@@ -1,0 +1,275 @@
+<style>
+  body{
+    background:url(https://i.pinimg.com/originals/4c/af/c8/4cafc8b3d9a5afd6f83e9c5c6412ff8e.jpg) !important;
+  }
+  .col-md-2{
+    border: 1px solid black;
+    padding-left:0px;
+  }
+    .hover {
+  overflow: hidden;
+  position: relative;
+}
+
+.hover-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  transition: all 0.4s;
+}
+
+
+.hover-3::after {
+  content: '';
+  width: calc(100% - 3rem);
+  height: calc(100% - 3rem);
+  border: 1px solid #fff;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 90;
+  transition: all 0.3s;
+  transform: scale(1.1);
+  opacity: 0;
+  display: block;
+  opacity: 0;
+}
+
+.hover-3-noidung {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  text-align: center;
+  z-index: 99;
+}
+.hover-3-noidung button{
+  font-size: 14px;
+}
+
+.hover-3-trichdan {
+  opacity: 0;
+  transform: scale(1.3);
+  transition: all 0.3s;
+}
+
+.hover-3 img {
+    width: 100%;
+  top: 50%;
+  left: 50%;
+
+}
+
+.hover-3 .hover-overlay {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.hover-3:hover img {
+
+}
+
+.hover-3:hover::after {
+  opacity: 1;
+  transform: none;
+}
+
+.hover-3:hover .hover-3-trichdan {
+  opacity: 1;
+  transform: none;
+}
+
+.hover-3:hover .hover-overlay {
+  background: rgba(0, 0, 0, 0.8);
+}
+.picture-up{
+  height: 500px;
+  margin-top:50px;
+
+}
+.profile-images-card{
+	margin: auto;
+	display: table;
+	background: #fff;
+	padding: 30px 50px;
+	box-shadow: 0px 0px 5px #ddd;
+}
+
+.profile-images{
+	width: 350px;
+	height: 350px;
+	background: #fff;
+
+	overflow: hidden;
+}
+
+.profile-images img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.custom-file input[type='file']{
+	display: none
+}
+
+.custom-file label{
+	cursor: pointer;
+	color: #000;
+	text-align: center;
+	display: table;
+	margin: auto;
+	margin-top: 15px;
+}
+
+</style>
+<body>
+<div class="main-content">
+<div class="container">
+  <div class="row col-md-12">
+      <div class="col-md-2 hover hover-3 text-white rounded" >
+      <img src="../assets/img/grey.jpg" class="card-img-top" alt="...">
+        <div class="hover-overlay"></div>
+      <div class="hover-3-noidung px-5 py-4">
+            <h3 class="hover-3-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Sepia Filter </span></h3>
+            <p class="hover-3-trichdan "><button type="button " class="btn btn-danger btn-dark" (click)="OnUpload('sepia')" >Convert</button></p>
+          </div>
+    </div>
+    <div class="col-md-2 hover hover-3 text-white rounded ">
+       <img src="../assets/img/sepia.jpg" class="card-img-top" alt="...">
+      <div class="hover-overlay"></div>
+      <div class="hover-3-noidung px-5 py-4">
+            <h3 class="hover-3-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Greyscale Filter </span></h3>
+            <p class="hover-3-trichdan "><button type="button " class="btn btn-danger btn-dark" (click)="OnUpload('grayscale')" >Convert</button></p>
+          </div>
+    </div>
+    <div class="col-md-2 hover hover-3 text-white rounded  ">
+      <img src="../assets/img/invert.jpg" class="card-img-top" alt="...">
+       <div class="hover-overlay"></div>
+      <div class="hover-3-noidung px-5 py-4">
+            <h3 class="hover-3-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Invert Filter </span></h3>
+            <p class="hover-3-trichdan "><button type="button " class="btn btn-danger btn-dark" (click)="OnUpload('invert')" >Convert</button></p>
+          </div>
+    </div>
+    <div class="col-md-2 hover hover-3 text-white rounded  ">
+      <img src="../assets/img/main.jpg" class="card-img-top" alt="...">
+        <div class="hover-overlay"></div>
+      <div class="hover-3-noidung px-5 py-4">
+            <h3 class="hover-3-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Electric Filter </span></h3>
+            <p class="hover-3-trichdan "><button type="button " class="btn btn-danger btn-dark" (click)="OnUpload('electric')" >Convert</button></p>
+          </div>
+    </div>
+    <div class="col-md-2 hover hover-3 text-white rounded  ">
+      <img src="../assets/img/main.jpg" class="card-img-top" alt="...">
+        <div class="hover-overlay"></div>
+      <div class="hover-3-noidung px-5 py-4">
+            <h3 class="hover-3-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">High Contrast Filter </span></h3>
+            <p class="hover-3-trichdan "><button type="button " class="btn btn-danger btn-dark" (click)="OnUpload('high_contrast')" >Convert</button></p>
+          </div>
+    </div>
+    <div class="col-md-2 hover hover-3 text-white rounded  ">
+      <img src="../assets/img/main.jpg" class="card-img-top" alt="...">
+        <div class="hover-overlay"></div>
+      <div class="hover-3-noidung px-5 py-4">
+            <h3 class="hover-3-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Darkened Filter </span></h3>
+            <p class="hover-3-trichdan "><button type="button " class="btn btn-danger btn-dark" (click)="OnUpload('darkened')" >Convert</button></p>
+          </div>
+    </div>
+
+
+  </div>
+</div>
+  <div class="picture-up">
+<div class="row">
+  <div class="col-md-5" style="margin-top:2%;margin-left:16%;margin-right:0%">
+    <div class="card">
+     <div class="profile-images-card" style="background:#473c42">
+	<div class="profile-images">
+		<img  id="upload-img">
+	</div>
+	<div class="custom-file">
+		<label for="fileupload" class="btn btn-primary" style="background-color: #f9c1b1;
+background-image: linear-gradient(315deg, #f9c1b1 0%, #fb8085 74%);border-color:white;
+">Upload Picture</label>
+		<input type="file" id="fileupload" (change)="onFileSelected($event)">
+	</div>
+</div>
+    </div>
+  </div>
+  <div class="col-md-5" style="margin-top:2%;margin-left:0%;">
+    <div class="card">
+       <div class="profile-images-card" style="background:#473c42">
+	<div class="profile-images">
+		<img [src]='data'  class="download-img">
+	</div>
+	<div class="custom-file">
+		<label  class="btn btn-primary" style="background-color: #f9c1b1;
+background-image: linear-gradient(315deg, #f9c1b1 0%, #fb8085 74%);border-color:white;
+" (click)="onDownload()">Download Picture</label>
+	</div>
+</div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+<div class="container">
+ <div class="row col-md-12" style="margin-bottom:20px;">
+      <div class="col-md-2 hover hover-3 text-white rounded" >
+      <img src="../assets/img/grey.jpg" class="card-img-top" alt="...">
+        <div class="hover-overlay"></div>
+      <div class="hover-3-noidung px-5 py-4">
+            <h3 class="hover-3-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Censored Filter </span></h3>
+            <p class="hover-3-trichdan "><button type="button " class="btn btn-danger btn-dark" (click)="OnUpload('censored')" >Convert</button></p>
+          </div>
+    </div>
+    <div class="col-md-2 hover hover-3 text-white rounded ">
+       <img src="../assets/img/sepia.jpg" class="card-img-top" alt="...">
+      <div class="hover-overlay"></div>
+      <div class="hover-3-noidung px-5 py-4">
+            <h3 class="hover-3-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Vintage Filter </span></h3>
+            <p class="hover-3-trichdan "><button type="button " class="btn btn-danger btn-dark" (click)="OnUpload('vintage')" >Convert</button></p>
+          </div>
+    </div>
+    <div class="col-md-2 hover hover-3 text-white rounded  ">
+      <img src="../assets/img/invert.jpg" class="card-img-top" alt="...">
+       <div class="hover-overlay"></div>
+      <div class="hover-3-noidung px-5 py-4">
+            <h3 class="hover-3-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Brightness Filter </span></h3>
+            <p class="hover-3-trichdan "><button type="button " class="btn btn-danger btn-dark" (click)="OnUpload('brightness')" >Convert</button></p>
+          </div>
+    </div>
+    <div class="col-md-2 hover hover-3 text-white rounded  ">
+      <img src="../assets/img/main.jpg" class="card-img-top" alt="...">
+        <div class="hover-overlay"></div>
+      <div class="hover-3-noidung px-5 py-4">
+            <h3 class="hover-3-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Saturated Filter </span></h3>
+            <p class="hover-3-trichdan "><button type="button " class="btn btn-danger btn-dark" (click)="OnUpload('saturated')" >Convert</button></p>
+          </div>
+    </div>
+    <div class="col-md-2 hover hover-3 text-white rounded  ">
+      <img src="../assets/img/main.jpg" class="card-img-top" alt="...">
+        <div class="hover-overlay"></div>
+      <div class="hover-3-noidung px-5 py-4">
+            <h3 class="hover-3-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Sepia Filter </span></h3>
+            <p class="hover-3-trichdan "><button type="button " class="btn btn-danger btn-dark" (click)="OnUpload('sepia')" >Convert</button></p>
+          </div>
+    </div>
+    <div class="col-md-2 hover hover-3 text-white rounded  ">
+      <img src="../assets/img/main.jpg" class="card-img-top" alt="...">
+        <div class="hover-overlay"></div>
+      <div class="hover-3-noidung px-5 py-4">
+            <h3 class="hover-3-tieude text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Greyscale Filter </span></h3>
+            <p class="hover-3-trichdan "><button type="button " class="btn btn-danger btn-dark" (click)="OnUpload('grayscale')" >Convert</button></p>
+          </div>
+    </div>
+
+
+  </div>
+</div>
+</body>
+
+
